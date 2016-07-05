@@ -26,7 +26,12 @@ func greet(name: String, greeting: String) {
 
 
 func planetDescription(planet: String, numberOfMoons: Int) {
-    print("There are \(numberOfMoons) moons orbiting \(planet)")
+    if (numberOfMoons == 1) {
+    print("There is \(numberOfMoons) moon orbiting \(planet)")
+    }
+    else {
+       print("There are \(numberOfMoons) moons orbiting \(planet)")
+    }
 }
 
 // This line of code gives an error.
@@ -40,4 +45,16 @@ var moons = 67
 planetDescription(planet, numberOfMoons: moons)
 planet = "Mars"
 moons = 2
+planetDescription(planet, numberOfMoons: moons)
+
+planet = "Venus"
+moons = 0
+planetDescription(planet, numberOfMoons: moons)
+
+planet = "Mercury"
+moons = 0
+planetDescription(planet, numberOfMoons: moons)
+
+planet = "Earth"
+moons = 1
 planetDescription(planet, numberOfMoons: moons)
